@@ -7,7 +7,6 @@ Content-Type: application/json
     "email": "suti@gmail.com",
     "password": "surti123",
     "confPassword":"surti123",
-    "role": "user"
 }
 
 ###
@@ -28,23 +27,11 @@ Content-Type: application/json
     "email": "user@gmail.com",
     "password": "",
     "confPassword":"",
-    "role": "user"
 }
 
 ###
 // Delete a User
 DELETE http://localhost:5000/users/82b681da-ebfb-43ca-974c-3adb5dc4511c
-
-###
-// Login Admin
-
-POST http://localhost:5000/login HTTP/1.1
-Content-Type: application/json
-
-{
-    "email": "admin@gmail.com",
-    "password": "admin123"
-}
 
 ###
 // Login User
@@ -56,10 +43,6 @@ Content-Type: application/json
     "password": "user123"
 }
 
-
-###
-// 
-GET http://localhost:5000/me
 
 ###
 // LogOut
