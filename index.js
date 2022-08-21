@@ -39,7 +39,7 @@ app.use(router);
 app.use(RecipeRoute);
 // store.sync();
 
-const PORT = process.env.APP_PORT || 5000;
+const PORT = process.env.APP_PORT||5000;
 app.listen(PORT, () => {
-    console.log('Server up and running...');
+    console.log(`Server up and running on ${PORT}`);
 });
