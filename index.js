@@ -43,3 +43,5 @@ const PORT = process.env.APP_PORT||5000;
 app.listen(PORT, () => {
     console.log(`Server up and running on ${PORT}`);
 });
+
+app.get ("/tes", (req, res) => res.send ("tes oke"))
