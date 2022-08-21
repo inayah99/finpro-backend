@@ -49,6 +49,6 @@ Recipe.belongsTo(Users, {foreignKey: 'userId'})
 
 export default Recipe;
 
-// (async()=>{
-//     await db.sync();
-// })();
+(async()=>{
+    await db.sync();
+})();
