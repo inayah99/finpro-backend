@@ -1,0 +1,112 @@
+// Create a User
+POST http://localhost:5000/users 
+Content-Type: application/json
+
+{
+    "name": "Surti",
+    "email": "suti@gmail.com",
+    "password": "surti123",
+    "confPassword":"surti123",
+    "role": "user"
+}
+
+###
+// Get All Users
+GET http://localhost:5000/users
+
+###
+// Get Single User
+GET http://localhost:5000/users/82b681da-ebfb-43ca-974c-3adb5dc4511c
+
+###
+// Update User
+PATCH  http://localhost:5000/users/82b681da-ebfb-43ca-974c-3adb5dc4511c
+Content-Type: application/json
+
+{
+    "name": "John Updated",
+    "email": "user@gmail.com",
+    "password": "",
+    "confPassword":"",
+    "role": "user"
+}
+
+###
+// Delete a User
+DELETE http://localhost:5000/users/82b681da-ebfb-43ca-974c-3adb5dc4511c
+
+###
+// Login Admin
+
+POST http://localhost:5000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin123"
+}
+
+###
+// Login User
+POST http://localhost:5000/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "user@gmail.com",
+    "password": "user123"
+}
+
+
+###
+// 
+GET http://localhost:5000/me
+
+###
+// LogOut
+DELETE http://localhost:5000/logout
+
+
+###
+// Get All Recipes
+GET http://localhost:5000/recipes
+
+###
+// POST DATA RECIPE
+POST http://localhost:5000/recipes
+Content-Type: application/json
+
+[
+    {
+        "name": "Mapo Tofu",
+        "bahan": "tahu",
+        "steps": "",
+        "deskripsi": "",
+        "image": "15ba87a400f35381f15b9eb8690e1810.png",
+        "url": "http://localhost:5000/images/15ba87a400f35381f15b9eb8690e1810.png",
+    }
+]
+
+###
+// Get Single Recipes
+GET http://localhost:5000/recipes/f8299fff-883b-475e-81b6-b0c82d20e9be
+
+
+###
+// POST DATA RECIPE
+PATCH  http://localhost:5000/recipes/f8299fff-883b-475e-81b6-b0c82d20e9be
+Content-Type: application/json
+{
+    "name": "Mafo Tofu",
+    "bahan": "tahu",
+    "steps": "bakar",
+    "deskripsi": "makanan china",
+}
+
+
+###
+// POST DATA RECIPE
+DELETE  http://localhost:5000/recipes/f8299fff-883b-475e-81b6-b0c82d20e9be
+
+
+###
+Get http://localhost:5000/recipes?search_query=Nasi&page=0&limit10
